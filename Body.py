@@ -663,11 +663,11 @@ while running:
             if event.key == pygame.K_f and not paused:
                 player_death()
 
+    screen.blit(background, background_rect)
     if paused:  # пауза
-        # draw_text(screen, "PAUSE", 48, WIDTH // 2, HEIGHT // 2)
+        draw_text(screen, "PAUSE", 48, WIDTH // 2, HEIGHT // 2)
         pygame.display.flip()
         continue
-    screen.blit(background, background_rect)
 
     '''обновление спрайтов и обработка столкновений_____________________________________________'''
     all_sprites.update()  # обновление спрайтов
